@@ -1,0 +1,3 @@
+1:	find /home/michele -maxdepth 1 | wc -l
+2:	find /home/michele/soEx05/ex01/lab/ -name "*.txt" -exec cat \{} \; | wc -l
+3:	ps -U root -u root | tail -n +2 | wc -l

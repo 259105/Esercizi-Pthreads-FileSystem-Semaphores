@@ -1,0 +1,12 @@
+Fork:
+  La fork() ha la caratteristica di fare un clone del PCB del processo chiamante, ritorna il pid del processo creato al processo chiamante, mentre ritorna pid 0 al processo figlio. Il figlio per sapere il suo pid o il pid del padre può usare le system call getpid() e getppid() rispettivamente. Il figlio riprende l'esecuzione della riga successiva alla fork();
+  Exec e System sono implementate con fork
+  Fork è utilizzata tipicamente per creare processi figli e per programmi concorrenti.
+Execve:
+	La execve() è una derivata della syscall exec(), la sua caratteristica è che quando chiamata esegue un altro processo e quando esso termina termina il processo. Se c'è stato errore ritorna -1. La execve() riceve il path del programma da eseguire e un vettore di argomenti, la e sta per Enviroment infatti riceve anche un vettore con le varibili di enviroment.
+	Differenza con system è che la system ritorna la programma chiamante e non termina
+	Tipicamente utilizzata dalla shell per l'esecuzione dei comandi
+System:
+	La system() è simile alla exec(), riceve come unico parametro una stringa in cui è scritto il comando di shell da eseguire, all termine ritorna al processo chiamante.
+	Differenza con la execve() e che lei ritorna al processo chiamante mentre la exec no
+	Viene implementata usando fork, exec e waitpid.

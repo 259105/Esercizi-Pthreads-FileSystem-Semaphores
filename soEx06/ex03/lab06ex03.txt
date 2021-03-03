@@ -1,0 +1,19 @@
+1)
+	Con Nome:		find / -name "*.exe" -type f -size +1024c -executable
+	Con Regex:	find / -regextype posix-extended -regex ".+\.exe" -type f -size +1024c -executable
+2)
+	Con Nome:		find / -name "*.c" -type f -size +100c -exec realpath \{} \;
+	Con Regex:	find / -regextype posix-extended -regex ".+\.c" -type f -size +100c -exec realpath \{} \;
+3)
+	find ~ -regextype posix-extended -regex ".*/\w*[aA]\w*[aA]\w*\..+" -type f -user michele -exec tail -n 3 \{} \;
+4) 
+	find ~ -maxdepth 5 -mindepth 3 -type f -size +250c -name "????.*" -exec wc -c \{} \;
+	find ~ -maxdepth 5 -mindepth 3 -type f -size +250c -name "????.*" -exec wc -l \{} \;
+5)
+	find ~ -type f -name "A*zzz*.???" -user michele -exec gzip -c \{} \; > compress.gz
+6)
+	find / -regextype posix-extended -regex ".*/bin/.*" 
+7)
+	find / -name "*.c" ! -user michele
+8)
+	find / -mindepth 1 -type f -user michele -exec chmod go-xrw \{} \;

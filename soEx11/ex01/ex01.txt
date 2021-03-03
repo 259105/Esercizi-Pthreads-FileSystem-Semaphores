@@ -1,0 +1,44 @@
+sem_t semAB,semC,semD,semME;
+int n=0;
+
+sem_init(&semAB);
+sem_init(&semC);
+sem_init(&semD);
+sem_init(&semME);
+
+void A(void *args){
+	sem_wait(&semAB);
+	//A
+	sem_post(&semC);
+ }
+ 
+void B(void *args){
+	sem_wait(&semAB);	
+	//B
+	sem_post(&semC);
+ }
+ 
+void C(void *agrs){
+ 	sem_wait(&semME);
+ 		n++;
+ 		if(n==1)
+ 			sem_wait(&semC);
+ 	sem_post(&semME);
+ 	//C
+	sem_wait(&semME);
+		n--;
+		if(!n)
+			sem_post(&semD);
+	sem_post(&semME);
+}
+ 
+void D(void *args){
+	sem_wait(&semD);
+	//D
+	sem_post(&semAB);
+}
+
+sem_destroy(&semAB);
+sem_destroy(&semC);
+sem_destroy(&semD);
+sem_destroy(&emME);

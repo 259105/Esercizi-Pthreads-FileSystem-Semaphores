@@ -1,0 +1,21 @@
+1)
+	sort -g -r lab06e04in.txt
+	sort -n -r lab06e04in.txt
+2)
+	sort -k 2,2 lab06e04in.txt
+3)
+	egrep ".+Frequentato nel 2011/2012$" lab06e04in.txt 
+4)
+	egrep ".+TLC1T3+" lab06e04in.txt | sort -n
+5)
+	egrep "^\w*[24]\s" lab06e04in.txt |sort -k 2,2
+6)
+	egrep ".+TLC1T3.+Da frequentare$" lab06e04in.txt | sort -k 1 -n -r
+7)
+	grep "A..A" lab06e04in.txt 
+8)
+	grep "A..A" lab06e04in.txt | grep -v "\<A" | grep -v "A\>"
+9)
+	cut -f 1 -d " " lab06e04in.txt | tr -d 0 | tr 8 1 | sort -n | uniq
+10)
+	cut -f 1 -d " " lab06e04in.txt | tr -d 0 | tr 8 1 | sort -n | uniq -d

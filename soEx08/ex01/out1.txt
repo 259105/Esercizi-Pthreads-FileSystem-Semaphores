@@ -1,0 +1,10 @@
+Name File: lab04ex01.c			Row Number: 5			Phrase: int main () {
+Name File: lab04ex02.c			Row Number: 5			Phrase: int main () {
+Name File: lab04ex03.c			Row Number: 6			Phrase: int main(int argc,char *argv[]){
+Name File: lab04ex03v1.c			Row Number: 8			Phrase: int main(int argc,char *argv[]){
+Name File: lab04.txt			Row Number: 23			Phrase: int main () {
+Name File: lab04.txt			Row Number: 56			Phrase: int main () {
+Name File: prg1			Row Number: Binary			Phrase: file /home/michele/soEx04/ex01/prg1 matches
+Name File: prg2			Row Number: Binary			Phrase: file /home/michele/soEx04/ex02/prg2 matches
+Name File: prg3			Row Number: Binary			Phrase: file /home/michele/soEx04/ex03/prg3 matches
+Name File: prg3v1			Row Number: Binary			Phrase: file /home/michele/soEx04/ex03/prg3v1 matches
